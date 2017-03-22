@@ -13,6 +13,12 @@ export default Ember.Component.extend({
         time: currentTime()
       };
       this.sendAction('savePost', params);
+      $('.showForm').toggle();
+      $('.showBTN').toggle();
+    },
+    showForm(){
+      $('.showForm').toggle();
+      $('.showBTN').toggle();
     }
   }
 });

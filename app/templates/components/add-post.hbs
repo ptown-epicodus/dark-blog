@@ -1,8 +1,19 @@
 <h2>Create a post</h2>
+<div class="showForm">
+  <form class='form'>
+    <div class="form-group">
+      {{input value=title id='post-title' placeholder='Title'}}
+    </div>
+    <div class="form-group">
+      {{textarea value=body cols='70' rows='8' id='post-content' placeholder='Content'}}
+    </div>
+    <div class="form-group">
+      <button {{action 'createPost'}} class="btn btn-success">Post</button>
+    </div>
+  </form>
 
-<form class=''>
-  {{input value=title id='post-title' placeholder='Title'}}
-  {{textarea value=body id='post-content' placeholder='Content'}}
+</div>
+<div class="showBTN">
 
-  <button {{action 'createPost'}}>Post</button>
-</form>
+  <button {{action 'showForm'}} class="btn btn-info">Add Post</button>
+</div>

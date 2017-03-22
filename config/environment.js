@@ -11,6 +11,10 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
+      }
     },
 
     firebase: {
@@ -26,6 +30,19 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  ENV.googleMap = {
+    apiKey: 'AIzaSyBf5YOoYYu3lt24j_Tq_Ef0Rhnh1V5ZVYc'
+  }
+
+  ENV.contentSecurityPolicy = {
+  'default-src': "'none'",
+  'script-src': "'self' 'unsafe-eval' *.googleapis.com maps.gstatic.com",
+  'font-src': "'self' fonts.gstatic.com",
+  'connect-src': "'self' maps.gstatic.com",
+  'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com",
+  'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
+  };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

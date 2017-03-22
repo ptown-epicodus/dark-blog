@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
+    return this.get('store').findAll('post').then(function(res){return res.slice(0,5)});
   },
   actions: {
     savePost(params) {

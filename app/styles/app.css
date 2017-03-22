@@ -5,3 +5,16 @@ li {
 .panel {
   width: 50%;
 }
+
+#map {
+  height: 300px;
+  width: 500px;
+}
+
+.mapDiv {
+  display: none;
+}
+
+.showForm{
+  display: none;
+}
