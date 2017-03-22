@@ -6,10 +6,6 @@ export default Ember.Route.extend({
   },
   actions: {
     updatePost(post, params) {
-      console.log('Post:');
-      console.log(post);
-      console.log('Params:');
-      console.log(params);
       Object.keys(params).forEach(function(key) {
         if(params[key] !== undefined) {
           post.set(key, params[key]);

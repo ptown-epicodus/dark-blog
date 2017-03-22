@@ -4,7 +4,6 @@ export default Ember.Component.extend({
   showingUpdate: false,
   actions: {
     updatePost(post) {
-      console.log(post);
       var params = {
         title: this.get('title'),
         body: this.get('body')
