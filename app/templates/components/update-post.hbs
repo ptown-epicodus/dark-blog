@@ -1,0 +1,9 @@
+{{#if showingUpdate}}
+  <form class=''>
+    {{input value=title id='post-title' placeholder='Title'}}
+    {{textarea value=body id='post-content' placeholder='Content'}}
+    <button {{action 'updatePost' model}}>Post</button>
+  </form>
+{{else}}
+  <button {{action 'showUpdate'}}>Edit</button>
+{{/if}}
