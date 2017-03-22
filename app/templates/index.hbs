@@ -1,1 +1,7 @@
 {{add-post savePost='savePost'}}
+
+<ul>
+  {{#each model as |post|}}
+    {{post-tile post=post}}
+  {{/each}}
+</ul>
