@@ -1,1 +1,8 @@
-{{yield}}
+<h2>Create a post</h2>
+
+<form class=''>
+  {{input value=title id='post-title' placeholder='Title'}}
+  {{textarea value=body id='post-content' placeholder='Content'}}
+
+  <button {{action 'createPost'}}>Post</button>
+</form>
